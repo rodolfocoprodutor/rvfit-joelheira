@@ -1,0 +1,391 @@
+@forward 'global';
+@forward 'components';
+@forward 'utils';
+
+.top-bar {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-blueopal-500);
+
+    .logo {
+
+        img {
+            max-height: 3.2rem;
+        }
+    }
+}
+
+.s-hero-banner {
+    height: 95vh;
+    align-items: center;
+    background-image: url("../../assets/bg_banner_hero.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: var(--clr-neutral-50);
+
+    h1, 
+    h2 {
+        color: var(--clr-neutral-700);
+    }
+
+    li {
+        color: var(--clr-neutral-500);
+    }
+
+    .container {
+        margin-inline: auto;
+        align-items: stretch;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 6.4rem;
+
+        .content_hero_info {
+            flex-direction: column;
+            justify-content: space-around;
+
+            .benefits_list {
+                
+                li{
+                    position: relative;
+                    left: 8%;
+                    font-size: var(--subtitle-h4);
+                    font-weight: 600;
+                    &::marker {
+                        content: url("../../assets/bullet_point.svg") ' ';
+                        font-size: 1.2em;
+                        width: 24px;
+                        height: 24px;
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            }
+        }
+
+        .content_hero_cta {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            span {
+                font-size: inherit;
+                font-family: 'Days One', sans-serif;
+                color: var(--clr-red-500);
+            }
+        }
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    .s-hero-banner {
+        background-image: none;
+    }
+}
+
+.s-problems {
+    h2, h3 {
+        color: var(--clr-neutral-700);
+    }
+
+    .container {
+        text-align: center;
+        .content_problems{
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 32rem), auto)) ;
+            gap: 3.2rem;
+            margin-top: 5.6rem;
+            margin-bottom: 5.6rem;
+            .content_cads {
+                align-items: stretch;
+                .card {
+                    background-color: var(--clr-red-500);
+                    color: var(--clr-neutral-50);
+                    text-align: left;
+                    min-width: 28rem;
+                    h3 {
+                        color: white;
+                    }
+
+                    p {
+                        margin-top: 2.4rem;
+                    }
+                }
+            }
+            .content_image {
+                margin-inline: auto;
+            }
+        }
+    }
+}
+
+.s-utilities {
+    background-color: var(--clr-blueopal-500);
+    color: var(--clr-neutral-50);
+    text-align: center;
+
+    .container {
+        h2{
+            strong {
+                color: var(--clr-forsythia-500);
+                font-size: inherit;
+            }
+        }
+        
+        .content_utilities {
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 32rem), auto)) ;
+            align-items: stretch;
+            justify-content: center;
+            row-gap: 6.4rem;
+            margin-top: 5.6rem;
+            margin-bottom: 5.6rem;
+
+            .content_utilities_items {
+                text-align: left;
+
+                .card {
+                    min-width: 30rem;
+                    
+                    &:hover {
+                        background-color: var(--clr-blueopal-600);
+                    }
+                    h3 {
+                        margin-top: 1.6rem;
+                    }
+
+                    p {
+                        margin-top: 2.4rem;
+                        line-height: 1.5;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            .content_utilities_description {
+                margin-inline: auto;
+                padding: 0 2.4rem ;
+
+                .description_info {
+                    margin-top: 5.6rem;
+                    gap: 6.4rem;
+
+                    li {
+                        display: grid;
+                        gap: 1.6rem;
+
+                        img {
+                            max-width: max-content;
+                            object-fit: contain;
+                            height: auto;
+                        }
+                        .alert {
+                            background-color: var(--clr-red-500);
+                            padding: 1.6rem 2.4rem;
+                            border-radius: 5rem;
+                            font-weight: 600;
+                        }
+                        .acept {
+                            background-color: var(--clr-poisonouspesticide-500);
+                            padding: 1.6rem 2.4rem;
+                            border-radius: 5rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
+                small {
+                    display: block;
+                    margin-top: 3.2rem;
+                    font-size: small;
+                }
+            }
+        }
+        button {
+            background-color: var(--clr-forsythia-500);
+            color: var(--clr-forsythia-900);
+            box-shadow: none;
+        }
+    }
+}
+
+.s-youtube {
+    text-align: center;
+
+    h2, h3 {
+        color: var(--clr-neutral-700);
+    }
+    .video-container {
+        position:relative;
+        padding-bottom:56.25%;
+        padding-top:30px;
+        height:0;
+        overflow:hidden;
+        margin-top: 5.6rem;
+    }
+    
+    .video-container iframe, .video-container object, .video-container embed {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        border-radius: .8rem;
+    }
+}
+
+.s-technologies {
+    background-color: var(--clr-blueopal-500);
+    color: var(--clr-neutral-50);
+    text-align: center;
+
+    .content_technologies {
+        margin-top: 5.6rem;
+        margin-bottom: 5.6rem;
+        gap: 1rem;
+
+        .card {
+            min-width: 30rem;
+            text-align: left;
+    
+            h3 {
+                margin-top: 1.6rem;
+            }
+    
+            p {
+                font-size: 1.6rem;
+                line-height: 1.5;
+                margin-top: 2.4rem;
+            }
+        }
+    }
+}
+
+.s-depoimento {
+    text-align: center;
+    h2, h3 {
+        color: var(--clr-neutral-700);
+    }
+}
+
+.s-especialista{
+    text-align: center;
+    background-image: url(../../assets/bg_section.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    h3 {
+        margin-top: 2.4rem;
+        line-height: 1.5;
+    }
+
+    img {
+        object-fit: contain;
+        max-width: 80%;
+        margin-inline: auto;
+        height: auto;
+        margin-top: 5.6rem;
+    }
+
+}
+
+.s-question{
+    text-align: center;
+    h2 {
+        color: var(--clr-poisonouspesticide-500);
+        margin-bottom: 2.4rem;
+    }
+
+    h3 {
+        line-height: 1.5;
+
+        span {
+            font-size: inherit;
+            color: var(--clr-poisonouspesticide-500);
+        }
+    }
+}
+
+.s-promo {
+    img {
+        object-fit: contain;
+        margin-inline: auto;
+        height: auto;
+        border-radius: 1.6rem;
+        outline: 1px #000 solid;
+    }
+}
+
+.s-offer {
+    text-align: center;
+    h2, h3 {
+        color: var(--clr-neutral-700);
+    }
+    h3 {
+        margin-top: 2.4rem;
+    }
+
+    .content_price_table {
+        margin-top: 5.6rem;
+        margin-bottom: 5.6rem;
+    }
+}
+
+.s-faq {
+    max-width: 96rem;
+    margin-inline: auto;
+    text-align: center;
+    h2, h3 {
+        color: var(--clr-neutral-700);
+    }
+    p {
+        color: var(--clr-neutral-500);
+    }
+    h3 {
+        margin-top: 1.6rem;
+    }
+
+    .faq_list {
+        text-align: left;
+        margin-top: 4rem;
+
+        li {
+            margin-top: 4rem;
+
+            p {
+                margin-top: 1.6rem;
+            }
+        }
+    }
+
+}
+
+.s-sale {
+    text-align: center;
+    h2, h3 {
+        color: var(--clr-neutral-700);
+    }
+    p {
+        color: var(--clr-neutral-500);
+    }
+    h3 {
+        margin-top: 1.6rem;
+    }
+
+    .sale_items {
+        align-items: stretch;
+        margin-top: 5.6rem;
+        margin-bottom: 5.6rem;
+
+        .card {
+            text-align: left;
+            min-width: 18rem;
+            background-color: var(--clr-blueopal-50);
+    
+            h3 {
+                font-size: var(--subtitle-h4);
+                margin-top: 1.6rem;
+            }
+            p {
+                font-size: var(--details);
+                margin-top: 2.4rem;
+            }
+        }
+    }
+    
+}

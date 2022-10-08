@@ -1,0 +1,22 @@
+button {
+    padding: 2rem 4rem;
+    color: var(--clr-neutral-50);
+    border-radius: .8rem;
+    font-size: var(--paragraph);
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--clr-poisonouspesticide-500);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color .8s ease;
+    transition: box-shadow .8s ease;
+    box-shadow: 0px 1.25rem 1.25rem -12px var(--clr-poisonouspesticide-500);
+
+    &:hover {
+        background-color: var(--clr-poisonouspesticide-600);
+        box-shadow: 0px 1.25rem 1.25rem -12px var(--clr-poisonouspesticide-600);
+        color: var(--clr-neutral-50);
+    }
+}
