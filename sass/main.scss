@@ -17,13 +17,16 @@
 }
 
 .s-hero-banner {
-    height: 95vh;
+    height: 100vh;
+    max-height: max-content;
     align-items: center;
     background-image: url("../../assets/bg_banner_hero.png");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: auto;
     background-color: var(--clr-neutral-50);
+    padding-top: 2.4rem;
+    margin-bottom: 5.6rem;
 
     h1, 
     h2 {
@@ -311,6 +314,7 @@
         outline: 1px #000 solid;
     }
 }
+/*
 
 .s-offer {
     text-align: center;
@@ -326,6 +330,19 @@
         margin-bottom: 5.6rem;
     }
 }
+
+*/
+
+.s-offer{
+     text-align: center;
+
+     .price-kits{
+        margin-top: 5.6rem;
+        justify-content: center;
+        gap: 3.2rem;
+     }
+}
+
 
 .s-faq {
     max-width: 96rem;
