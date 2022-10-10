@@ -264,6 +264,22 @@
     h2, h3 {
         color: var(--clr-neutral-700);
     }
+    .dep_content_videos {
+    max-width: 96rem;
+    margin-top: 5.6rem;
+    padding: 0 9% ;
+    margin-inline: auto;    
+    grid-template-columns: repeat(auto-fit, minmax(32rem, auto));
+    justify-content: center;
+    gap: 1.6rem;
+
+    .dep_video {
+        max-width: max-content;
+        iframe{
+            border-radius: .8rem;
+            }
+        }
+    }
 }
 
 .s-especialista{
