@@ -17,7 +17,6 @@
 }
 
 .s-hero-banner {
-    height: 75vh;
     max-height: max-content;
     align-items: center;
     background-image: url("../../assets/bg_banner_hero.png");
@@ -25,8 +24,8 @@
     background-repeat: no-repeat;
     background-size: auto;
     background-color: var(--clr-neutral-50);
-    padding-top: 2.4rem;
-    margin-bottom: 5.6rem;
+    padding-top: 6.4rem;
+    margin-bottom: 6.4rem;
 
     h1, 
     h2 {
@@ -249,12 +248,19 @@
             h3 {
                 margin-top: 1.6rem;
             }
-    
-            p {
-                font-size: 1.6rem;
-                line-height: 1.5;
-                margin-top: 2.4rem;
+            
+            .card_descripion{
+                li {
+                    font-size: 1.6rem;
+                    line-height: 1.5;
+                    margin-top: 1.6rem;
+
+                    &::before {
+                        content: '✅ ';
+                    }
+                }
             }
+
         }
     }
 }
@@ -279,6 +285,9 @@
             border-radius: .8rem;
             }
         }
+    }
+    button {
+        margin-top: 5.6rem;
     }
 }
 
@@ -435,4 +444,17 @@
         }
     }
     
+}
+
+footer {
+    .whatsapp-chat {
+        position: fixed;
+        bottom: 1.6rem;
+        right: 1.6rem;
+
+        img {
+            max-width: 6.4rem;
+            object-fit: contain;
+        }
+    }
 }
